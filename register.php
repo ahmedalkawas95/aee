@@ -1,6 +1,6 @@
 <?php
 // الاتصال بقاعدة البيانات
-$host = 'phpmyadmin.com';
+$host = 'https://www.phpmyadmin.co/';
 $dbname = 'registration_db.sql';
 $username = 'sql12758266';
 $password = 'VquZzQV7Lj';
