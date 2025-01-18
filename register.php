@@ -1,6 +1,6 @@
 <?php
 // الاتصال بقاعدة البيانات
-$host = 'https://www.phpmyadmin.co/db_structure.php?server=1&db=sql12758266';
+$host = 'Server: sql12.freemysqlhosting.net';
 $dbname = 'registration_db.sql';
 $username = 'sql12758266';
 $password = 'VquZzQV7Lj';
