@@ -13,13 +13,13 @@ try {
 }
 
 // استلام البيانات من الفورم
-$name = $_POST['name'];
-$phone = $_POST['phone'];
-$governorate = $_POST['governorate'];
-$referral_phone = $_POST['referral_phone'];
-$age = $_POST['age'];
-$college = $_POST['college'];
-$university = $_POST['university'];
+$name = $_GET['name'];
+$phone = $_GET['phone'];
+$governorate = $_GET['governorate'];
+$referral_phone = $_GET['referral_phone'];
+$age = $_GET['age'];
+$college = $_GET['college'];
+$university = $_GET['university'];
 
 
 
@@ -28,6 +28,7 @@ $university = $_POST['university'];
 if (empty($name) || empty($phone) || empty($governorate) || empty($referral_phone) || empty($age) || empty($college) || empty($university)) {
     die("يرجى ملء جميع الحقول المطلوبة.");
 }
+
 
 // حفظ البيانات في قاعدة البيانات
 $sql = "INSERT INTO users (name, phone, governorate, referral_phone, age, college, university) 
