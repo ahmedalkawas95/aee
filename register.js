@@ -8,6 +8,7 @@ const port = 3000;
 // إعدادات قاعدة البيانات
 const db = mysql.createConnection({
     host: 'sql12.freemysqlhosting.net',
+    $dbname = 'registration_db.sql',
     user: 'sql12758266',
     password: 'VquZzQV7Lj',
     database: 'registration_db.sql'
