@@ -1,42 +1,22 @@
-const express = require('express');
-const mysql = require('mysql2');
-const bodyParser = require('body-parser');
+const db = require('./db_connection'); // استدعاء ملف الاتصال بقاعدة البيانات
 
-const app = express();
-const port = 3000;
+// مثال على البيانات المدخلة
+const name = 'محمد أحمد';
+const phone = '0123456789';
+const governorate = 'القاهرة';
+const referralPhone = '01122334455';
+const age = 25;
+const college = 'كلية الهندسة';
+const university = 'جامعة القاهرة';
 
-// إعدادات قاعدة البيانات
-const db = mysql.createConnection({
-    host: 'sql12.freemysqlhosting.net',
-    $dbname = 'registration_db.sql',
-    user: 'sql12758266',
-    password: 'VquZzQV7Lj',
-    database: 'registration_db.sql'
-});
+// استعلام إدخال البيانات
+const sql = `INSERT INTO users (name, phone, governorate, referral_phone, age, college, university)
+             VALUES (?, ?, ?, ?, ?, ?, ?)`;
 
-// استخدام body-parser لتحليل بيانات POST
-app.use(bodyParser.urlencoded({ extended: true }));
-
-// نقطة النهاية لاستلام البيانات
-app.post('/register', (req, res) => {
-    const { name, phone, governorate, referral_phone, age, college, university } = req.body;
-
-    // التحقق من أن جميع الحقول تم ملؤها
-    if (!name || !phone || !governorate || !referral_phone || !age || !college || !university) {
-        return res.status(400).send("يرجى ملء جميع البيانات غير الضرورية.");
+db.query(sql, [name, phone, governorate, referralPhone, age, college, university], (err, result) => {
+    if (err) {
+        console.error('خطأ أثناء إدخال البيانات:', err.message);
+        return;
     }
-
-    // حفظ البيانات في قاعدة البيانات
-    const sql = "INSERT INTO المستخدمين (الاسم, الهاتف, المحافظة, هاتف الإحالة, العمر, الكلية, الجامعة) VALUES (?, ?, ?, ?, ?, ?, ?)";
-    db.query(sql, [name, phone, governorate, referral_phone, age, college, university], (err, results) => {
-        if (err) {
-            return res.status(500).send("فشل الاتصال بقاعدة البيانات: " + err.message);
-        }
-        res.send("تم تسجيل البيانات الفعالة!");
-    });
-});
-
-// بدء الخادم
-app.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}`);
+    console.log('تم إدخال البيانات بنجاح!', result.insertId);
 });
