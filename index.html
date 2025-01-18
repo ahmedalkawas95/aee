@@ -50,18 +50,17 @@
 </head>
 <body>
     <div class="form-container">
-        <h1>نموذج التسجيل</h1>
-        <form action="https://github.com/" method="POST"> <!-- تغيير هنا -->
-            <label for="name">الاسم الكامل:</label>
-            <input type="text" id="name" name="name" required>
+    <form action="register.php" method="POST">
+    <label for="name">الاسم الكامل:</label>
+    <input type="text" id="name" name="name" required>
 
-            <label for="phone">رقم الهاتف:</label>
-            <input type="text" id="phone" name="phone" required>
+    <label for="phone">رقم الهاتف:</label>
+    <input type="text" id="phone" name="phone" required>
 
-            <label for="governorate">المحافظة:</label>
-            <select id="governorate" name="governorate" required>
-                <option value="">اختر المحافظة</option>
-                <option value="القاهرة">القاهرة</option>
+    <label for="governorate">المحافظة:</label>
+    <select id="governorate" name="governorate" required>
+        <option value="">اختر المحافظة</option>
+       <option value="القاهرة">القاهرة</option>
                 <option value="الجيزة">الجيزة</option>
                 <option value="الإسكندرية">الإسكندرية</option>
                 <option value="الدقهلية">الدقهلية</option>
@@ -88,21 +87,25 @@
                 <option value="قنا">قنا</option>
                 <option value="شمال سيناء">شمال سيناء</option>
                 <option value="سوهاج">سوهاج</option>
-            </select>
-            <label for="referral_phone">رقم هاتف الشخص المرشح:</label>
-            <input type="text" id="referral_phone" name="referral_phone" required>
+    </select>
 
-            <label for="age">السن:</label>
-            <input type="number" id="age" name="age" required>
+    <label for="referral_phone">رقم هاتف الشخص المرشح:</label>
+    <input type="text" id="referral_phone" name="referral_phone" required>
 
-            <label for="college">الكلية:</label>
-            <input type="text" id="college" name="college" required>
+    <label for="age">السن:</label>
+    <input type="number" id="age" name="age" required>
 
-            <label for="university">الجامعة:</label>
-            <input type="text" id="university" name="university" required>
+    <label for="college">الكلية:</label>
+    <input type="text" id="college" name="college" required>
 
-            <button type="submit">تسجيل</button>
-        </form>
+    <label for="university">الجامعة:</label>
+    <input type="text" id="university" name="university" required>
+
+    <button type="submit">تسجيل</button>
+</form>
+
+    
+       
     </div>
 </body>
 </html>
