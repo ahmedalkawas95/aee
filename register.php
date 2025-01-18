@@ -1,7 +1,7 @@
 <?php
 // الاتصال بقاعدة البيانات
-$host = 'phpmyadmin.com';
-$dbname = 'sql12758266';
+$host = 'sql12.freemysqlhosting.net';
+$dbname = 'registration_db';
 $username = 'sql12758266';
 $password = 'VquZzQV7Lj';
 
