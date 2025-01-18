@@ -21,15 +21,7 @@ $age = $_POST['age'];
 $college = $_POST['college'];
 $university = $_POST['university'];
 
-<form action="register.php" method="POST">
-    <label for="name">الاسم:</label>
-    <input type="text" id="name" name="name" required>
 
-    <label for="phone">رقم الهاتف:</label>
-    <input type="text" id="phone" name="phone" required>
-
-    <button type="submit">تسجيل</button>
-</form>
 
 
 // التحقق من أن جميع الحقول تم ملؤها
