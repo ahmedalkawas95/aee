@@ -13,13 +13,13 @@ try {
 }
 
 // استلام البيانات من الفورم
-$name = $_GET['name'];
-$phone = $_GET['phone'];
-$governorate = $_GET['governorate'];
-$referral_phone = $_GET['referral_phone'];
-$age = $_GET['age'];
-$college = $_GET['college'];
-$university = $_GET['university'];
+$name = $_POST['name'];
+$phone = $_POST['phone'];
+$governorate = $_POST['governorate'];
+$referral_phone = $_POST['referral_phone'];
+$age = $_POST['age'];
+$college = $_POST['college'];
+$university = $_POST['university'];
 
 
 
