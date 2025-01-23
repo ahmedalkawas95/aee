@@ -1,7 +1,7 @@
 <?php
 // بيانات الاتصال بقاعدة البيانات
 $host = 'https://github.com'; // اسم السيرفر (محليًا يكون localhost)
-$dbname = 'registration_db.sql'; // اسم قاعدة البيانات
+$dbname = 'registration_db'; // اسم قاعدة البيانات
 $username = 'sql12758266'; // اسم المستخدم (محليًا يكون root)
 $password = 'VquZzQV7Lj'; // كلمة المرور (محليًا تكون فارغة)
 
